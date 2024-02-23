@@ -140,3 +140,25 @@ button {
         justify-self: flex-start;
     }
 }
+
+@media (min-width: 1025px) {
+    .main {
+        display: grid;
+        grid-template-columns: .8fr 1.1fr 1.1fr 1fr;
+        gap: 2rem;
+    }
+
+    .main .text-input {
+        grid-column: 2 / 4;
+    }
+
+    .main .buttons-wrapper {
+        grid-column: 2 / 4;
+        padding-bottom: 0;
+    }
+
+    .main .text-result-container {
+        grid-column: 4 / 5;
+        grid-row: 1 / 3;
+    }
+}
