@@ -2,8 +2,9 @@ const textAreaInput = document.querySelector(".text-input")
 const btnEncrypt = document.querySelector(".btn-encrypt")
 const btnDecrypt = document.querySelector(".btn-decrypt")
 const btnCopyToClipboard = document.querySelector(".btn-text-copy")
-const txtResult = document.querySelector(".text-result")
+const txtResult = document.querySelector(".text-area-result")
 const txtInstructions = document.querySelector(".text-instructions")
+const imgTextResult = document.querySelector(".img-text-result")
 
 btnEncrypt.addEventListener('click', () => {
     const input = textAreaInput.value.trim()
@@ -25,6 +26,7 @@ function showResult(encriptText) {
     txtResult.style.fontWeight = 'normal'
     txtResult.style.textAlign = 'left'
     txtInstructions.style.display = 'none'
+    imgTextResult.style.display = 'none'
     btnCopyToClipboard.classList.remove('hide')
 }
 
