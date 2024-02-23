@@ -55,7 +55,7 @@ body {
   display: flex;
   flex-direction: column;
   padding-bottom: 4rem;
-  gap: 1rem;  
+  gap: 1rem;
 }
 
 .main .buttons-wrapper .warning-msg-wrapper {
@@ -122,4 +122,21 @@ button {
 
 .main .text-result-container .text-instructions {
     font-size: 1rem;
+}
+
+@media (min-width: 600px) {
+    .main .buttons-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+    button {
+        width: min(450px, 100%);
+    }
+
+    .main .buttons-wrapper .warning-msg-wrapper {
+        grid-column: 1 / 3;
+        justify-self: flex-start;
+    }
 }
