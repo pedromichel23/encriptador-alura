@@ -5,12 +5,19 @@ const btnCopyToClipboard = document.querySelector(".btn-text-copy")
 const txtResult = document.querySelector(".text-area-result")
 const txtInstructions = document.querySelector(".text-instructions")
 const imgTextResult = document.querySelector(".img-text-result")
+const btnReload = document.querySelector(".btn-restart")
+
+btnReload.addEventListener('click', () => {
+    location.reload()
+})
 
 btnEncrypt.addEventListener('click', () => {
     const input = textAreaInput.value.trim()
     const result = encryptText(input)
     showResult(result)
     window.scrollBy(0, window.innerHeight)
+    btnReload.style.display = 'grid'
+    btnReload.style.placeContent = 'center'
 })
 
 btnCopyToClipboard.addEventListener('click',  () => {
