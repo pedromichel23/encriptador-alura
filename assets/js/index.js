@@ -8,27 +8,25 @@ const txtInstructions = document.querySelector(".text-instructions")
 btnEncrypt.addEventListener('click', () => {
     const input = textAreaInput.value.trim()
     const result = encryptText(input)
-    txtResult.textContent = result
-    txtResult.style.fontWeight = 'normal'
-    txtResult.style.textAlign = 'left'
-    txtInstructions.style.display = 'none'
-    btnCopyToClipboard.classList.remove('hide')
+    showResult(result)
+    window.scrollBy(0, window.innerHeight)
 })
 
 btnCopyToClipboard.addEventListener('click',  () => {
     const text = txtResult.textContent
     navigator.clipboard.writeText(text)
     .then( () => {
-        navigator.clipboard.readText()
-        .then((clipBoard) => {
-            console.log('clipboard:', clipBoard)
-            alert("Texto copiado: " + clipBoard)
-        })
-        // alert("Texto copiado")
+        alert("Texto copiado al portapapeles.")
     })
-    // alert('Texto copiado al portapapeles.')
-    // console.log('Clipboard: ', navigator.clipboard.readText())
 })
+
+function showResult(encriptText) {
+    txtResult.textContent = encriptText
+    txtResult.style.fontWeight = 'normal'
+    txtResult.style.textAlign = 'left'
+    txtInstructions.style.display = 'none'
+    btnCopyToClipboard.classList.remove('hide')
+}
 
 function encryptText(text) {
     const words = text.split(' ')
