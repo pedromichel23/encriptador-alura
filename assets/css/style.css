@@ -85,6 +85,7 @@ button {
     border-radius: 15px;
     font-family: "Inter";
     font-size: 1rem;
+    max-height: 54px;
 }
 
 .main .buttons-wrapper .btn-encrypt {
@@ -126,6 +127,7 @@ button {
     padding: .2rem;
     color: gray;
     font-family: 'Inter';
+    font-size: 1rem;
 }
 
 .main .text-result-container .text-area-result:focus {
