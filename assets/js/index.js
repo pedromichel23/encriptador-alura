@@ -6,6 +6,13 @@ const txtResult = document.querySelector(".text-area-result")
 const txtInstructions = document.querySelector(".text-instructions")
 const imgTextResult = document.querySelector(".img-text-result")
 const btnReload = document.querySelector(".btn-restart")
+const decryptVowelsV2 = {
+    "a": "ai",
+    "e": "enter",
+    "i": "imes",
+    "o": "ober",
+    "u": "ufat"
+}
 
 btnReload.addEventListener('click', () => {
     location.reload()
@@ -14,6 +21,15 @@ btnReload.addEventListener('click', () => {
 btnEncrypt.addEventListener('click', () => {
     const input = textAreaInput.value.trim()
     const result = encryptText(input)
+    showResult(result)
+    window.scrollBy(0, window.innerHeight)
+    btnReload.style.display = 'grid'
+    btnReload.style.placeContent = 'center'
+})
+
+btnDecrypt.addEventListener('click', () => {
+    const input = textAreaInput.value.trim()
+    const result = decryptText(input)
     showResult(result)
     window.scrollBy(0, window.innerHeight)
     btnReload.style.display = 'grid'
@@ -40,6 +56,12 @@ function showResult(encriptText) {
 function encryptText(text) {
     const words = text.split(' ')
     const result = words.map(word => encrypt(word))
+    return result.join(' ')
+}
+
+function decryptText(text) {
+    const words = text.split(' ')
+    const result = words.map(word => decrypt(word))
     return result.join(' ')
 }
 
@@ -78,6 +100,23 @@ function encrypt(word) {
     return word
 }
 
+function decrypt(word) {
+    const splitWord = word.split('')
+    let actualIndex = 0
+    const result = []
+    while (actualIndex < splitWord.length) {
+        if (Object.keys(decryptVowelsV2).includes(splitWord[actualIndex])) {
+            result.push(splitWord[actualIndex])
+            jumpSpaces = decryptVowelsV2[splitWord[actualIndex]].length
+            actualIndex = actualIndex + jumpSpaces
+        } else {
+            result.push(splitWord[actualIndex])
+            actualIndex++
+        }
+    }
+    return result.join('')
+}
+
 // Test
 const word1 = "gato"
 const word2 = "manzana"
@@ -87,3 +126,18 @@ const word4 = "gátó"
 // console.log(encrypt(word2))
 // console.log(encrypt(word3))
 // console.log(encrypt(word4))
+const decryptVowels = {
+    "ai": "a",
+    "enter": "e",
+    "imes": "i",
+    "ober": "o",
+    "ufat": "u"
+}
+
+
+
+const test5 = "Tenterxtober denter prufatenterbai" //Texto de prueba
+const test6 = "enterscailenterrai"
+const test7 = "pailaibrai"
+
+//console.log(test7.replace("ai", "a"))
