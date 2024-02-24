@@ -6,7 +6,10 @@
 
 @font-face {
     font-family: "Inter";
-    src: url("../fonts/Inter-VariableFont-wght.ttf") format("truetype");
+    src:
+        url("../fonts/Inter-VariableFont-wght.woff2") format("woff2"), 
+        url("../fonts/Inter.woff") format("woff"),
+        url("../fonts/Inter-VariableFont-wght.ttf") format("truetype");
     font-display: swap;
 }
 
