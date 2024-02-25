@@ -22,24 +22,28 @@
         </div>
     </header>
     <main class="main">
-        <textarea class="text-input" name="text-input" id="" placeholder="Ingrese el texto aqui"></textarea>
-        <div class="buttons-wrapper">
+        <section class="text-input-section">
+            <textarea class="text-input" name="text-input" id="" placeholder="Ingrese el texto aqui"></textarea>
+        </section>
+        <section class="buttons-wrapper">
             <div class="warning-msg-wrapper">
                 <span class="circle">!</span>
                 <span class="warning-msg">Solo letras minusculas, sin acentos y sin caracteres especiales.</span>
             </div>
             <button class="btn-encrypt">Encriptar</button>
             <button class="btn-decrypt btn-transparent">Desencriptar</button>
-        </div>
-        <div class="text-result-container" >
-            <textarea class="text-area-result" name="text-area-result" readonly ></textarea>
-            <img class="img-text-result" src="./assets/img/result-img.jpeg" alt="Ningun mensaje fue encontrado">
-            <p class="text-instructions"><span>Ningún mensaje fue encontrado.</span>Ingresa el texto que desees encriptar o desencriptar.</p>
-            <button class="btn-text-copy hide btn-transparent">Copiar</button>
-            <button class="btn-restart">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rotate-clockwise" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0A3871" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4.05 11a8 8 0 1 1 .5 4m-.5 5v-5h5" /></svg>
-            </button>
-        </div>
+        </section>
+        <section class="text-result-container-section">
+            <div class="text-result-container" >
+                <textarea class="text-area-result" name="text-area-result" readonly ></textarea>
+                <img class="img-text-result" src="./assets/img/result-img.jpeg" alt="Ningun mensaje fue encontrado">
+                <p class="text-instructions"><span>Ningún mensaje fue encontrado.</span>Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button class="btn-text-copy hide btn-transparent">Copiar</button>
+                <button class="btn-restart">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rotate-clockwise" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0A3871" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4.05 11a8 8 0 1 1 .5 4m-.5 5v-5h5" /></svg>
+                </button>
+            </div>
+        </section>
     </main>
 
     <script src="./assets/js/index.js">

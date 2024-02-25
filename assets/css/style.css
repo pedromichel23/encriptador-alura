@@ -39,7 +39,7 @@ body {
     font-family: "Inter";
 }
 
-.main .text-input {
+.main section .text-input {
     resize: none;
     width: 100%;
     border: none;
@@ -49,7 +49,7 @@ body {
     font-size: 2rem;
 }
 
-.main .text-input::placeholder {
+.main section .text-input::placeholder {
     color: var(--font-color-text-area);
     font-family: "Inter";
 }
@@ -163,8 +163,6 @@ button {
     background-color: transparent;
     border: 1px solid var(--btn-encrypt-color);
     border-radius: 7px;
-    /* display: grid;
-    place-content: center; */
     cursor: pointer;
     right: 16px;
     display: none;
@@ -194,7 +192,7 @@ button {
         gap: 2rem;
     }
 
-    .main .text-input {
+    .main .text-input-section {
         grid-column: 2 / 4;
     }
 
@@ -203,12 +201,16 @@ button {
         padding-bottom: 0;
     }
 
-    .main .text-result-container {
+    .main .text-result-container-section {
         grid-column: 4 / 5;
         grid-row: 1 / 3;
     }
 
-    .main .text-result-container img {
+    .main .text-result-container-section .text-result-container {
+        height: 100%;
+    }
+
+    .main section .text-result-container img {
         display: block;
     }
 }
