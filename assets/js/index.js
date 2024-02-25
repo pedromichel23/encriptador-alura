@@ -14,26 +14,25 @@ const decryptVowelsV2 = {
     "u": "ufat"
 }
 
+function encryptOrDecryptText(encryptDecrypt){
+    const input = textAreaInput.value.trim()
+    const result = encryptDecrypt(input)
+    showResult(result)
+    window.scrollBy(0, window.innerHeight)
+    btnReload.style.display = 'grid'
+    btnReload.style.placeContent = 'center'
+}
+
 btnReload.addEventListener('click', () => {
     location.reload()
 })
 
 btnEncrypt.addEventListener('click', () => {
-    const input = textAreaInput.value.trim()
-    const result = encryptText(input)
-    showResult(result)
-    window.scrollBy(0, window.innerHeight)
-    btnReload.style.display = 'grid'
-    btnReload.style.placeContent = 'center'
+    encryptOrDecryptText(encryptText)
 })
 
 btnDecrypt.addEventListener('click', () => {
-    const input = textAreaInput.value.trim()
-    const result = decryptText(input)
-    showResult(result)
-    window.scrollBy(0, window.innerHeight)
-    btnReload.style.display = 'grid'
-    btnReload.style.placeContent = 'center'
+    encryptOrDecryptText(decryptText)
 })
 
 btnCopyToClipboard.addEventListener('click',  () => {
