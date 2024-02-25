@@ -21,6 +21,8 @@
 ## Acerca del proyecto
 El encriptador de texto alura es un sitio web en el cual se puede encriptar texto, copiar el resultado y pegarlo donde desees, tambien es posible desencriptar el texto, es responsive y se puede usar tanto en dispositivos moviles como en PC de escritorio. Es un proyecto de alura, en el cual tenemos la oportunidad de practicar las tecnologias aprendidas en sus cursos.
 
+![alt text](<Captura de pantalla 2024-02-25 a la(s) 0.56.29.png>)
+
 ## Tecnologias utilizadas
 <ul>
     <li>HTML</li>
@@ -29,6 +31,7 @@ El encriptador de texto alura es un sitio web en el cual se puede encriptar text
 </ul>
 
 ## Acceso al proyecto
+https://pedromichel23.github.io/encriptador-alura/
 
 ## Contacto 📭
 **Pedro Michel** 
