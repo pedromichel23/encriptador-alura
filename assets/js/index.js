@@ -115,28 +115,3 @@ function decrypt(word) {
     }
     return result.join('')
 }
-
-// Test
-const word1 = "gato"
-const word2 = "manzana"
-const word3 = "mnzn"
-const word4 = "gátó"
-// console.log(encrypt(word1))
-// console.log(encrypt(word2))
-// console.log(encrypt(word3))
-// console.log(encrypt(word4))
-const decryptVowels = {
-    "ai": "a",
-    "enter": "e",
-    "imes": "i",
-    "ober": "o",
-    "ufat": "u"
-}
-
-
-
-const test5 = "Tenterxtober denter prufatenterbai" //Texto de prueba
-const test6 = "enterscailenterrai"
-const test7 = "pailaibrai"
-
-//console.log(test7.replace("ai", "a"))
